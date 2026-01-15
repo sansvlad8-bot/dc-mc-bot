@@ -1,12 +1,16 @@
+from dotenv import load_dotenv
 import discord
 import requests
 import asyncio
+import os
 
-
-TOKEN = "MTQ2MTE2MTMzMDcwNTY5ODg0Nw.GQX8ro.Ato29rKY-1A3AfPN1M5oCEzUuzsFmYbsV8UU4E"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 CHANNEL_ID = 1044367569475338240
 MC_SERVER = "shrimpsy.aternos.me:36312"
 CHECK_INTERVAL = 900
+
+print("TOKEN = ", TOKEN)
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
