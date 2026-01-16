@@ -28,7 +28,7 @@ async def check_server_status():
 
     while True:
         try:
-            url = f"https://api.mcsrvstat.us/2/%7BMC_SERVER%7D"
+            url = f"https://api.mcsrvstat.us/2/{MC_SERVER}"
             r = requests.get(url, timeout=10)
             data = r.json()
 
